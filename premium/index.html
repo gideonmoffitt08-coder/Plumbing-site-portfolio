@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FlowRight Plumbing Co. | Master Plumbers, Same-Day Service</title>
+<meta name="description" content="FlowRight Plumbing Co. — licensed master plumbers serving the greater metro. Leak repair, drain cleaning, water heaters, repiping & 24/7 emergency service. Get a free quote." />
+<meta name="keywords" content="plumber, plumbing, leak repair, drain cleaning, water heater, emergency plumber, tankless, repiping" />
+<meta name="author" content="FlowRight Plumbing Co." />
+<link rel="canonical" href="https://example.com/premium/" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="FlowRight Plumbing Co. | Master Plumbers, Same-Day Service" />
+<meta property="og:description" content="Licensed master plumbers serving the greater metro. Same-day & 24/7 emergency plumbing." />
+<meta property="og:url" content="https://example.com/premium/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="FlowRight Plumbing Co." />
+<meta name="twitter:description" content="Licensed master plumbers — same-day & emergency service." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<!-- LocalBusiness schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Plumber",
+  "name":"FlowRight Plumbing Co.",
+  "image":"https://example.com/premium/og.jpg",
+  "@id":"https://example.com/premium/",
+  "url":"https://example.com/premium/",
+  "telephone":"+1-555-123-4567",
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"100 Mainline Ave",
+    "addressLocality":"Metro City",
+    "addressRegion":"CA",
+    "postalCode":"90000",
+    "addressCountry":"US"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":34.0522,"longitude":-118.2437},
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens":"00:00","closes":"23:59"
+  }],
+  "areaServed":["Downtown","Riverside","Oak Hills","Westgate","Maple Grove","Lakeside","North End"],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"218"},
+  "sameAs":["https://facebook.com/","https://instagram.com/"]
+}
+</script>
+<style>
+  :root{
+    --slate:#1C2B3A;--copper:#B87333;--white:#F8F9FA;--blue:#2196F3;--yellow:#FFC107;
+    --slate-2:#243a4f;--muted:#5d6b78;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--slate);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.brand{font-family:'Barlow Condensed',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{padding:14px 26px;border-radius:11px;font-weight:700;text-decoration:none;font-size:15px;text-transform:uppercase;letter-spacing:.5px;transition:transform .2s,background .2s,box-shadow .2s;border:0;cursor:pointer;font-family:inherit;display:inline-block}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(33,150,243,.35)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid var(--copper)}
+  .btn.yellow{background:var(--yellow);color:var(--slate)}
+
+  /* NAV transparent -> slate */
+  nav{position:fixed;top:0;left:0;right:0;z-index:80;transition:background .35s ease,box-shadow .35s ease,border-color .35s;background:transparent;border-bottom:2px solid transparent}
+  nav.solid{background:rgba(28,43,58,.97);backdrop-filter:blur(8px);border-bottom-color:var(--copper);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff;font-weight:700;font-size:22px;text-decoration:none}
+  .brand .logo{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--copper),#d68b48);display:grid;place-items:center}
+  .brand .logo svg{width:21px;height:21px}
+  .links{display:flex;align-items:center;gap:24px}
+  .links a{color:#dbe4ec;text-decoration:none;font-weight:600;font-size:14.5px;transition:color .2s}
+  .links a:hover{color:var(--blue)}
+  .links .call{background:var(--blue);color:#fff;padding:9px 16px;border-radius:9px}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:3px;background:#fff;border-radius:2px;transition:.3s}
+  .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  @media(max-width:920px){
+    .burger{display:flex}
+    .links{position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--slate);padding:0 22px;gap:0;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;border-bottom:2px solid var(--copper)}
+    .links.show{max-height:380px;padding:14px 22px 22px}
+    .links a{width:100%;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .links .call{text-align:center;margin-top:10px}
+  }
+
+  /* CINEMATIC HERO */
+  .hero{position:relative;min-height:100vh;display:grid;align-items:center;color:#fff;overflow:hidden;
+    background:
+      radial-gradient(1000px 600px at 75% 20%, #2b577a 0%, transparent 60%),
+      linear-gradient(160deg,#173043 0%, #0e1a25 100%)}
+  .particles{position:absolute;inset:0;overflow:hidden;z-index:1}
+  .particle{position:absolute;bottom:-40px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(120,200,255,.9), rgba(33,150,243,.35));opacity:0;animation:rise linear infinite}
+  @keyframes rise{
+    0%{transform:translateY(0) translateX(0) scale(.6);opacity:0}
+    10%{opacity:.8}
+    90%{opacity:.5}
+    100%{transform:translateY(-115vh) translateX(var(--drift)) scale(1.1);opacity:0}
+  }
+  /* horizontal flowing streaks */
+  .streak{position:absolute;height:2px;background:linear-gradient(90deg,transparent,rgba(120,200,255,.5),transparent);animation:flow linear infinite;opacity:.5}
+  @keyframes flow{0%{transform:translateX(-120%)}100%{transform:translateX(120vw)}}
+  .hero-inner{position:relative;z-index:3;padding:120px 0 80px}
+  .hero .eyebrow{color:var(--copper);font-weight:700;letter-spacing:4px;font-size:13px;text-transform:uppercase}
+  .hero h1{font-size:clamp(46px,7vw,86px);line-height:.95;margin:16px 0 20px;font-weight:700;max-width:780px}
+  .hero h1 span{color:var(--blue)}
+  .hero p.lead{color:#b8c6d4;font-size:20px;line-height:1.55;max-width:560px}
+  .hero .btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+  .hero .stats{display:flex;gap:38px;margin-top:46px;flex-wrap:wrap}
+  .hero .stats .s strong{font-family:'Barlow Condensed';font-size:40px;color:#fff;display:block;line-height:1}
+  .hero .stats .s span{color:#8fa9bd;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+  .scrolldown{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;color:#8fa9bd;font-size:12px;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scrolldown .mouse{width:22px;height:34px;border:2px solid #8fa9bd;border-radius:12px;position:relative}
+  .scrolldown .mouse::after{content:"";position:absolute;top:6px;left:50%;width:3px;height:7px;background:#8fa9bd;border-radius:2px;transform:translateX(-50%);animation:scroller 1.6s infinite}
+  @keyframes scroller{0%{opacity:0;top:6px}50%{opacity:1}100%{opacity:0;top:16px}}
+
+  /* SECTION SHELL */
+  section.block{padding:90px 0;position:relative}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 54px}
+  .kicker{color:var(--copper);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:13px}
+  .sec-head h2{font-size:clamp(32px,5vw,50px);margin:10px 0 14px;font-weight:700}
+  .sec-head p{color:var(--muted);font-size:17px;line-height:1.6}
+  .alt{background:var(--slate);color:#fff}
+  .alt .sec-head p{color:#aebccb}
+
+  /* FLIP CARDS (7) */
+  .flipgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .flipgrid .flip:nth-child(5),.flipgrid .flip:nth-child(6),.flipgrid .flip:nth-child(7){}
+  .flip{perspective:1200px;height:230px}
+  .flip-in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+  .flip:hover .flip-in,.flip:focus-within .flip-in{transform:rotateY(180deg)}
+  .face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:26px 22px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+  .front{background:#fff;border:1px solid #e6ebf0;box-shadow:0 12px 30px rgba(28,43,58,.08)}
+  .front .ic{width:58px;height:58px;border-radius:14px;background:linear-gradient(135deg,#1C2B3A,#2b455d);display:grid;place-items:center;margin-bottom:14px}
+  .front .ic svg{width:30px;height:30px}
+  .front h3{font-size:22px;color:var(--slate)}
+  .front .hint{margin-top:8px;font-size:12px;color:var(--copper);letter-spacing:1px;text-transform:uppercase;font-weight:700}
+  .back{background:linear-gradient(150deg,#2196F3,#1565c0);color:#fff;transform:rotateY(180deg);box-shadow:0 12px 30px rgba(33,150,243,.3)}
+  .back h3{font-size:20px;margin-bottom:8px}
+  .back p{font-size:13.5px;line-height:1.5;color:#e3f0ff}
+  .back .price{margin-top:12px;font-family:'Barlow Condensed';font-size:24px;font-weight:700}
+
+  /* DIAGNOSTIC TOOL */
+  .diag{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:34px;max-width:880px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .diag h3{font-size:24px;margin-bottom:6px}
+  .diag .lead{color:#aebccb;font-size:14.5px;margin-bottom:20px;line-height:1.5}
+  .symptoms{display:flex;flex-direction:column;gap:10px}
+  .sym{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;cursor:pointer;transition:.2s;font-size:14.5px}
+  .sym:hover{border-color:var(--blue)}
+  .sym input{width:18px;height:18px;accent-color:var(--blue)}
+  .sym.checked{background:rgba(33,150,243,.14);border-color:var(--blue)}
+  .diag-result{background:rgba(28,43,58,.6);border:1px solid rgba(184,115,51,.4);border-radius:16px;padding:26px;display:flex;flex-direction:column}
+  .diag-result .badge{align-self:flex-start;background:var(--copper);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:14px}
+  .diag-result h4{font-family:'Barlow Condensed';font-size:28px;text-transform:uppercase;margin-bottom:8px;color:#fff}
+  .diag-result p{color:#cdd8e2;font-size:14.5px;line-height:1.55;flex:1}
+  .diag-result .rec-price{color:var(--yellow);font-family:'Barlow Condensed';font-size:22px;font-weight:700;margin:14px 0}
+  .diag-result .btn{align-self:flex-start;margin-top:4px}
+  @media(max-width:780px){.diag{grid-template-columns:1fr}}
+
+  /* BEFORE / AFTER SLIDER */
+  .ba{max-width:840px;margin:0 auto;position:relative;border-radius:18px;overflow:hidden;height:420px;user-select:none;box-shadow:0 24px 60px rgba(0,0,0,.25);cursor:ew-resize}
+  .ba .layer{position:absolute;inset:0;display:grid;place-items:center;font-family:'Barlow Condensed';color:#fff}
+  .ba .after{background:linear-gradient(135deg,#1f6f43,#2e9e62)}
+  .ba .before{background:linear-gradient(135deg,#7a2e2e,#a14444);clip-path:inset(0 50% 0 0)}
+  .ba .tag{position:absolute;top:16px;padding:7px 14px;border-radius:8px;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;background:rgba(0,0,0,.45)}
+  .ba .tag.l{left:16px}.ba .tag.r{right:16px}
+  .ba .content{text-align:center;padding:0 30px}
+  .ba .content .big{font-size:30px}.ba .content .sm{font-family:'Inter';font-size:14px;color:rgba(255,255,255,.85);margin-top:8px;max-width:280px}
+  .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:4px;background:#fff;transform:translateX(-50%);z-index:5}
+  .ba .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.4);color:var(--slate)}
+  .ba .knob svg{width:24px;height:24px}
+
+  /* MAP with pulse rings */
+  .mapwrap{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+  .svc-map{background:linear-gradient(150deg,#13212e,#1C2B3A);border-radius:20px;border:1px solid rgba(184,115,51,.3);position:relative;overflow:hidden;aspect-ratio:4/3}
+  .svc-map svg{width:100%;height:100%;display:block}
+  .zone{transform-box:fill-box;transform-origin:center}
+  .ring{fill:none;stroke:var(--blue);stroke-width:2;opacity:0;transform-origin:center;transform-box:fill-box}
+  .ring.a{animation:pulsering 3s ease-out infinite}
+  .ring.b{animation:pulsering 3s ease-out 1s infinite}
+  .ring.c{animation:pulsering 3s ease-out 2s infinite}
+  @keyframes pulsering{0%{transform:scale(.2);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+  .maptext h2{font-size:36px;margin:8px 0 12px}
+  .maptext p{color:#aebccb;line-height:1.65;margin-bottom:16px}
+  .arealist{list-style:none;display:flex;flex-wrap:wrap;gap:9px}
+  .arealist li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#dbe4ec;padding:7px 13px;border-radius:999px;font-size:13.5px;font-weight:600}
+  @media(max-width:820px){.mapwrap{grid-template-columns:1fr}}
+
+  /* TESTIMONIAL CAROUSEL */
+  .carousel{max-width:760px;margin:0 auto;position:relative}
+  .track{overflow:hidden;border-radius:18px}
+  .slides{display:flex;transition:transform .5s ease}
+  .slide{min-width:100%;padding:42px 46px;background:#fff;border:1px solid #e6ebf0;box-shadow:0 16px 40px rgba(28,43,58,.08);text-align:center}
+  .slide .stars{color:var(--yellow);font-size:22px;letter-spacing:3px;margin-bottom:16px}
+  .slide p{font-size:18px;line-height:1.6;color:#36434f;font-style:italic}
+  .slide .who{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:12px}
+  .slide .av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--copper),#d68b48);display:grid;place-items:center;color:#fff;font-weight:700;font-family:'Barlow Condensed';font-size:20px}
+  .slide .who strong{display:block;color:var(--slate)}
+  .slide .who span{color:var(--muted);font-size:13px}
+  .cbtns{display:flex;justify-content:center;gap:12px;margin-top:22px;align-items:center}
+  .cbtns button{width:44px;height:44px;border-radius:50%;border:1px solid #d6dde4;background:#fff;cursor:pointer;display:grid;place-items:center;transition:.2s}
+  .cbtns button:hover{background:var(--slate);color:#fff;border-color:var(--slate)}
+  .cbtns button svg{width:20px;height:20px}
+  .dots{display:flex;gap:8px}
+  .dots i{width:10px;height:10px;border-radius:50%;background:#cdd5dc;cursor:pointer;transition:.2s;display:inline-block}
+  .dots i.on{background:var(--blue);width:26px;border-radius:6px}
+
+  /* QUOTE FORM */
+  .quotegrid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .qside h2{font-size:38px;margin:8px 0 14px}
+  .qside p{color:#aebccb;line-height:1.65;margin-bottom:22px}
+  form.quote{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:32px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:13px;color:#aebccb;margin-bottom:7px;font-weight:600}
+  .field input,.field textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font-family:inherit;font-size:15px}
+  .field input::placeholder,.field textarea::placeholder{color:#7e8e9e}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+  .chk{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:11px 12px;cursor:pointer;font-size:13.5px;transition:.2s}
+  .chk:hover{border-color:var(--blue)}
+  .chk input{width:17px;height:17px;accent-color:var(--blue)}
+  .chk.on{background:rgba(33,150,243,.14);border-color:var(--blue)}
+  .toggle-row{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 16px;margin:6px 0 18px}
+  .toggle-row .tl strong{display:block;font-size:15px}
+  .toggle-row .tl span{color:#8fa0b0;font-size:12.5px}
+  .switch{position:relative;width:64px;height:32px;flex:0 0 auto}
+  .switch input{opacity:0;width:0;height:0}
+  .switch .sl{position:absolute;inset:0;background:#3a4a5a;border-radius:999px;cursor:pointer;transition:.3s}
+  .switch .sl::before{content:"";position:absolute;width:26px;height:26px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.3s}
+  .switch input:checked + .sl{background:var(--yellow)}
+  .switch input:checked + .sl::before{transform:translateX(32px)}
+  .ok-msg{display:none;background:rgba(33,150,243,.15);border:1px solid var(--blue);color:#cde6ff;padding:12px 14px;border-radius:10px;margin-top:14px;font-size:14px}
+  .formnote{font-size:12.5px;color:#8fa0b0;margin-top:8px}
+  @media(max-width:820px){.quotegrid{grid-template-columns:1fr}.checklist{grid-template-columns:1fr}}
+
+  footer{background:#0e1a25;color:#7e8e9e;padding:46px 0 30px}
+  footer .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:28px}
+  footer h4{color:#fff;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;font-size:18px}
+  footer a{color:#9fb0c0;text-decoration:none;display:block;padding:4px 0;font-size:14px}
+  footer a:hover{color:var(--copper)}
+  footer .copy{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;text-align:center;font-size:13.5px}
+  @media(max-width:720px){footer .fgrid{grid-template-columns:1fr}}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:920px){.flipgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.flipgrid{grid-template-columns:1fr;max-width:340px;margin:0 auto}.hero .stats{gap:24px}}
+</style>
+</head>
+<body>
+  <nav id="nav">
+    <div class="wrap">
+      <a class="brand" href="#top"><span class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 5 9.5 5 15a7 7 0 0 0 14 0c0-5.5-7-13-7-13Z" fill="#fff"/></svg></span>FlowRight Plumbing</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <div class="links" id="links">
+        <a href="#services">Services</a>
+        <a href="#diagnostic">Diagnostic</a>
+        <a href="#work">Our Work</a>
+        <a href="#area">Service Area</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#quote">Free Quote</a>
+        <a class="call" href="tel:5551234567">(555) 123-4567</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CINEMATIC HERO -->
+  <header class="hero" id="top">
+    <div class="particles" id="particles" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Master Plumbers • Same-Day • 24/7 Emergency</span>
+      <h1>Plumbing Done <span>Right</span> the First Time</h1>
+      <p class="lead">Precision diagnostics, transparent pricing, and craftsmanship you can stake your home on. FlowRight is the team your neighbors call when it has to be done right.</p>
+      <div class="btns">
+        <a class="btn primary" href="#quote">Get a Free Quote</a>
+        <a class="btn ghost" href="#diagnostic">Try the Diagnostic Tool</a>
+      </div>
+      <div class="stats">
+        <div class="s"><strong>15+</strong><span>Years Experience</span></div>
+        <div class="s"><strong>4.9★</strong><span>218 Reviews</span></div>
+        <div class="s"><strong>24/7</strong><span>Emergency Service</span></div>
+      </div>
+    </div>
+    <div class="scrolldown"><div class="mouse"></div>Scroll</div>
+  </header>
+
+  <!-- SERVICES (7 flip cards) -->
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Our Services</span>
+        <h2>Seven Ways We Keep You Flowing</h2>
+        <p>Hover any card to see what's included and a starting price.</p>
+      </div>
+      <div class="flipgrid">
+        <div class="flip reveal" tabindex="0"><div class="flip-in">
+          <div class="face front"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2s7 7.5 7 13a7 7 0 0 1-14 0C5 9.5 12 2 12 2Z" stroke="#2196F3" stroke-width="2" fill="rgba(33,150,243,.18)"/></svg></div><h3>Leak Repair</h3><div class="hint">Hover for details</div></div>
+          <div class="face back"><h3>Leak Repair</h3><p>Thermal &amp; acoustic leak detection, slab leaks, and pinhole pipe repair with minimal disruption.</p><div class="price">From $89</div></div>
+        </div></div>
+        <div class="flip reveal" tabindex="0"><div class="flip-in">
+          <div class="face front"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M7 5v6a5 5 0 0 0 10 0V5M12 16v5" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Drain Cleaning</h3><div class="hint">Hover for details</div></div>
+          <div class="face back"><h3>Drain Cleaning</h3><p>Camera inspection, hydro-jetting, and root removal to clear and protect your lines.</p><div class="price">From $119</div></div>
+        </div></div>
+        <div class="flip reveal" tabindex="0"><div class="flip-in">
+          <div class="face front"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="3" stroke="#2196F3" stroke-width="2"/><path d="M9 8h6M9 12h6" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Water Heaters</h3><div class="hint">Hover for details</div></div>
+          <div class="face back"><h3>Water Heaters</h3><p>Tank &amp; tankless repair, flushes, anode swaps, and high-efficiency installs.</p><div class="price">From $149</div></div>
+        </div></div>
+        <div class="flip reveal" tabindex="0"><div class="flip-in">
+          <div class="face front"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-7h6" stroke="#2196F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Repiping</h3><div class="hint">Hover for details</div></div>
+          <div class="face back"><h3>Repiping</h3><p>Whole-home repipes in PEX or copper, permitted and warrantied for decades.</p><div class="price">Custom Quote</div></div>
+        </div></div>
+        <div class="flip reveal" tabindex="0"><div class="flip-in">
+          <div class="face front"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#2196F3" stroke-width="2"/><path d="M12 8v4l3 2" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Fixtures</h3><div class="hint">Hover for details</div></div>
+          <div class="face back"><h3>Fixture Installs</h3><p>Faucets, toilets, garbage disposals, and sinks installed clean and to code.</p><div class="price">From $99</div></div>
+        </div></div>
+        <div class="flip reveal" tabindex="0"><div class="flip-in">
+          <div class="face front"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v4M5 7l3 3M19 7l-3 3M4 14h16l-1 6H5l-1-6Z" stroke="#2196F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Sump Pumps</h3><div class="hint">Hover for details</div></div>
+          <div class="face back"><h3>Sump Pumps</h3><p>Pump installs, battery backups, and basement waterproofing to keep you dry.</p><div class="price">From $279</div></div>
+        </div></div>
+        <div class="flip reveal" tabindex="0"><div class="flip-in">
+          <div class="face front"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7h18M6 7v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7M9 7V5a3 3 0 0 1 6 0v2" stroke="#2196F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Emergency</h3><div class="hint">Hover for details</div></div>
+          <div class="face back"><h3>24/7 Emergency</h3><p>Burst pipes, sewage backups, and flooding — real plumbers on call around the clock.</p><div class="price">Day or Night</div></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGNOSTIC TOOL -->
+  <section class="block alt" id="diagnostic">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Pipe Pressure Diagnostic</span>
+        <h2>What's Going On With Your Plumbing?</h2>
+        <p>Check the symptoms you're seeing and we'll suggest the right service — instantly.</p>
+      </div>
+      <div class="diag reveal">
+        <div>
+          <h3>Select Your Symptoms</h3>
+          <p class="lead">Pick all that apply. The tool weighs your answers and recommends a starting point.</p>
+          <div class="symptoms" id="symptoms">
+            <label class="sym"><input type="checkbox" data-k="drain"> Slow or clogged drain</label>
+            <label class="sym"><input type="checkbox" data-k="hot"> No hot water / runs cold</label>
+            <label class="sym"><input type="checkbox" data-k="pressure"> Low water pressure</label>
+            <label class="sym"><input type="checkbox" data-k="leak"> Visible leak or water stains</label>
+            <label class="sym"><input type="checkbox" data-k="noise"> Banging / knocking pipes</label>
+            <label class="sym"><input type="checkbox" data-k="smell"> Sewage smell or gurgling</label>
+            <label class="sym"><input type="checkbox" data-k="flood"> Active flooding / burst pipe</label>
+          </div>
+        </div>
+        <div class="diag-result" id="diagResult">
+          <span class="badge" id="diagBadge">Awaiting Input</span>
+          <h4 id="diagTitle">Select a symptom</h4>
+          <p id="diagText">Check one or more boxes on the left and we'll recommend the right FlowRight service for your situation.</p>
+          <div class="rec-price" id="diagPrice"></div>
+          <a class="btn primary" href="#quote" id="diagCta" style="display:none">Book This Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE/AFTER SLIDER -->
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Our Work</span>
+        <h2>Water Damage, Undone</h2>
+        <p>Drag the handle to see a recent restoration — before and after.</p>
+      </div>
+      <div class="ba reveal" id="ba">
+        <div class="layer after"><div class="content"><div class="big">AFTER</div><div class="sm">Dry, restored, and repiped. Mold remediated and walls refinished.</div></div></div>
+        <div class="layer before" id="baBefore"><div class="content"><div class="big">BEFORE</div><div class="sm">Burst supply line behind the wall — water damage and staining.</div></div></div>
+        <span class="tag l">Before</span>
+        <span class="tag r">After</span>
+        <div class="handle" id="baHandle"><div class="knob"><svg viewBox="0 0 24 24" fill="none"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5" stroke="#1C2B3A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA MAP -->
+  <section class="block alt" id="area">
+    <div class="wrap">
+      <div class="mapwrap">
+        <div class="svc-map reveal" aria-label="Service area map">
+          <svg viewBox="0 0 400 300" fill="none">
+            <!-- stylized landmass -->
+            <path d="M30 120 C 70 70, 150 60, 200 90 C 260 60, 340 80, 370 140 C 390 190, 330 250, 250 250 C 180 270, 80 250, 50 200 C 20 170, 10 150, 30 120 Z" fill="#22384b" stroke="#B87333" stroke-width="2"/>
+            <!-- roads -->
+            <path d="M60 150 H 340 M200 80 V 250 M120 110 L 280 230" stroke="rgba(255,255,255,.08)" stroke-width="3"/>
+            <!-- zones with pulse rings -->
+            <g>
+              <circle class="ring a" cx="140" cy="140" r="20"/><circle class="ring b" cx="140" cy="140" r="20"/>
+              <circle cx="140" cy="140" r="7" fill="#2196F3"/>
+            </g>
+            <g>
+              <circle class="ring a" cx="250" cy="120" r="20"/><circle class="ring c" cx="250" cy="120" r="20"/>
+              <circle cx="250" cy="120" r="7" fill="#2196F3"/>
+            </g>
+            <g>
+              <circle class="ring b" cx="210" cy="200" r="20"/><circle class="ring c" cx="210" cy="200" r="20"/>
+              <circle cx="210" cy="200" r="7" fill="#2196F3"/>
+            </g>
+            <!-- HQ pin -->
+            <g>
+              <path d="M190 165 c0 12 10 22 10 22 s10-10 10-22 a10 10 0 1 0-20 0Z" fill="#FFC107"/>
+              <circle cx="200" cy="165" r="4" fill="#1C2B3A"/>
+            </g>
+          </svg>
+        </div>
+        <div class="maptext reveal">
+          <span class="kicker">Service Area</span>
+          <h2>Fast Response, Wherever You Are</h2>
+          <p>Our trucks are stationed across the metro so help is never far. Pulse zones show our highest-coverage neighborhoods with same-day guarantees.</p>
+          <ul class="arealist">
+            <li>Downtown</li><li>Riverside</li><li>Oak Hills</li><li>Westgate</li><li>Maple Grove</li><li>Lakeside</li><li>North End</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL CAROUSEL -->
+  <section class="block" id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Reviews</span>
+        <h2>Rated 4.9 by 218 Neighbors</h2>
+        <p>Swipe through a few of our favorite words.</p>
+      </div>
+      <div class="carousel reveal">
+        <div class="track"><div class="slides" id="slides">
+          <div class="slide"><div class="stars">★★★★★</div><p>"FlowRight diagnosed a slab leak two other companies missed. Fixed it same week, fair price, and explained every step. Absolute pros."</p><div class="who"><div class="av">DM</div><div><strong>Dana M.</strong><span>Oak Hills</span></div></div></div>
+          <div class="slide"><div class="stars">★★★★★</div><p>"Tankless install looked intimidating but their tech made it painless. Clean work, on time, and the price matched the quote exactly."</p><div class="who"><div class="av">RT</div><div><strong>Rico T.</strong><span>Riverside</span></div></div></div>
+          <div class="slide"><div class="stars">★★★★★</div><p>"Burst pipe at 11pm and a real plumber answered. Stopped the flooding fast and saved our floors. Worth every penny."</p><div class="who"><div class="av">SP</div><div><strong>Sela P.</strong><span>Westgate</span></div></div></div>
+          <div class="slide"><div class="stars">★★★★★</div><p>"The online diagnostic pointed me to exactly the right service before they even arrived. Smartest plumbing experience I've had."</p><div class="who"><div class="av">JK</div><div><strong>Jordan K.</strong><span>Maple Grove</span></div></div></div>
+        </div></div>
+        <div class="cbtns">
+          <button id="prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dots" id="dots"></div>
+          <button id="next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section class="block alt" id="quote">
+    <div class="wrap">
+      <div class="quotegrid">
+        <div class="qside reveal">
+          <span class="kicker">Free Quote</span>
+          <h2>Build Your Quote</h2>
+          <p>Tell us what you need and how fast. We'll respond with a clear, no-obligation estimate — usually within the hour.</p>
+          <ul class="arealist" style="margin-top:6px">
+            <li>✓ No-obligation</li><li>✓ Flat-rate pricing</li><li>✓ Licensed &amp; insured</li>
+          </ul>
+        </div>
+        <form class="quote reveal" id="quoteForm" novalidate>
+          <div class="two">
+            <div class="field"><label for="qname">Name</label><input id="qname" type="text" placeholder="Jane Doe" required></div>
+            <div class="field"><label for="qphone">Phone</label><input id="qphone" type="tel" placeholder="(555) 000-0000" required></div>
+          </div>
+          <div class="field"><label for="qemail">Email</label><input id="qemail" type="email" placeholder="you@email.com"></div>
+          <div class="field">
+            <label>What do you need? (check all that apply)</label>
+            <div class="checklist" id="checklist">
+              <label class="chk"><input type="checkbox" value="Leak Repair"> Leak Repair</label>
+              <label class="chk"><input type="checkbox" value="Drain Cleaning"> Drain Cleaning</label>
+              <label class="chk"><input type="checkbox" value="Water Heater"> Water Heater</label>
+              <label class="chk"><input type="checkbox" value="Repiping"> Repiping</label>
+              <label class="chk"><input type="checkbox" value="Fixture Install"> Fixture Install</label>
+              <label class="chk"><input type="checkbox" value="Sump Pump"> Sump Pump</label>
+            </div>
+          </div>
+          <div class="toggle-row">
+            <div class="tl"><strong>Emergency Service</strong><span id="urgLabel">Standard scheduling</span></div>
+            <label class="switch"><input type="checkbox" id="urgToggle"><span class="sl"></span></label>
+          </div>
+          <div class="field"><label for="qmsg">Details</label><textarea id="qmsg" rows="3" placeholder="Anything else we should know?"></textarea></div>
+          <button class="btn primary" type="submit" style="width:100%">Request My Quote</button>
+          <div class="formnote">Demo form — nothing is actually submitted.</div>
+          <div class="ok-msg" id="qOk">✓ Got it! On a live site we'd send your quote request to our dispatch team right away.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="fgrid">
+        <div>
+          <a class="brand" href="#top" style="margin-bottom:12px"><span class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 5 9.5 5 15a7 7 0 0 0 14 0c0-5.5-7-13-7-13Z" fill="#fff"/></svg></span>FlowRight Plumbing</a>
+          <p style="color:#9fb0c0;font-size:14px;line-height:1.6;margin-top:12px;max-width:320px">Licensed master plumbers serving the greater metro with honest pricing and same-day service, day or night.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="#services">Leak Repair</a><a href="#services">Drain Cleaning</a><a href="#services">Water Heaters</a><a href="#services">Emergency</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:5551234567">(555) 123-4567</a><a href="mailto:help@flowright.co">help@flowright.co</a><a href="#area">Service Area</a><a href="../index.html">Back to Demos</a>
+        </div>
+      </div>
+      <div class="copy">© 2026 FlowRight Plumbing Co. • Licensed &amp; Insured • Lic #PL-000000</div>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- NAV: transparent -> solid + hamburger ---------- */
+    const nav=document.getElementById('nav');
+    const onScroll=()=>nav.classList.toggle('solid',window.scrollY>60);
+    onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+    const burger=document.getElementById('burger'),links=document.getElementById('links');
+    burger.addEventListener('click',()=>{burger.classList.toggle('open');links.classList.toggle('show');});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('open');links.classList.remove('show');}));
+
+    /* ---------- HERO water particles ---------- */
+    (function(){
+      const box=document.getElementById('particles');
+      const N=26;
+      for(let i=0;i<N;i++){
+        const p=document.createElement('span');p.className='particle';
+        const size=4+Math.random()*16;
+        p.style.width=p.style.height=size+'px';
+        p.style.left=Math.random()*100+'%';
+        p.style.setProperty('--drift',(Math.random()*120-60)+'px');
+        p.style.animationDuration=(7+Math.random()*9)+'s';
+        p.style.animationDelay=(-Math.random()*12)+'s';
+        box.appendChild(p);
+      }
+      for(let i=0;i<7;i++){
+        const s=document.createElement('span');s.className='streak';
+        s.style.top=(10+Math.random()*80)+'%';
+        s.style.width=(120+Math.random()*180)+'px';
+        s.style.animationDuration=(6+Math.random()*7)+'s';
+        s.style.animationDelay=(-Math.random()*10)+'s';
+        box.appendChild(s);
+      }
+    })();
+
+    /* ---------- DIAGNOSTIC decision tree ---------- */
+    (function(){
+      const boxes=[...document.querySelectorAll('#symptoms input')];
+      const rules=[
+        {k:'flood', pr:0, badge:'Emergency', title:'Emergency Shutoff & Repair', price:'24/7 Dispatch', text:'Active flooding needs immediate attention. Shut off your main valve if you can and call us now — we run emergency crews around the clock.'},
+        {k:'smell', pr:1, badge:'Sewer Line', title:'Sewer & Drain Service', price:'From $149', text:'Sewage odor or gurgling usually points to a main line blockage or venting issue. A camera inspection pinpoints it fast.'},
+        {k:'leak',  pr:2, badge:'Leak Repair', title:'Leak Detection & Repair', price:'From $89', text:'Visible water or staining means a leak that can damage structure and grow mold. We locate and seal it with minimal cutting.'},
+        {k:'hot',   pr:3, badge:'Water Heater', title:'Water Heater Service', price:'From $149', text:'No hot water is typically a heating element, thermostat, or sediment issue. We repair or upgrade tank and tankless units.'},
+        {k:'pressure',pr:4,badge:'Pressure', title:'Pressure & Supply Service', price:'From $109', text:'Low pressure can stem from buildup, a failing regulator, or a hidden leak. We test the system and restore proper flow.'},
+        {k:'noise', pr:5, badge:'Pipe Service', title:'Water Hammer & Pipe Service', price:'From $99', text:'Banging pipes often mean water hammer or loose lines. We secure runs and add arrestors to quiet things down.'},
+        {k:'drain', pr:6, badge:'Drain Cleaning', title:'Drain Cleaning', price:'From $119', text:'Slow or clogged drains clear up fast with hydro-jetting and augering — plus a camera check to keep them clear.'}
+      ];
+      const el={badge:document.getElementById('diagBadge'),title:document.getElementById('diagTitle'),text:document.getElementById('diagText'),price:document.getElementById('diagPrice'),cta:document.getElementById('diagCta')};
+      function update(){
+        const active=new Set(boxes.filter(b=>b.checked).map(b=>b.dataset.k));
+        boxes.forEach(b=>b.closest('.sym').classList.toggle('checked',b.checked));
+        if(active.size===0){
+          el.badge.textContent='Awaiting Input';el.title.textContent='Select a symptom';
+          el.text.textContent='Check one or more boxes on the left and we’ll recommend the right FlowRight service for your situation.';
+          el.price.textContent='';el.cta.style.display='none';return;
+        }
+        // pick the highest-priority matching rule (lowest pr number)
+        const match=rules.find(r=>active.has(r.k));
+        el.badge.textContent=match.badge;el.title.textContent=match.title;
+        let extra=active.size>1?` We noticed ${active.size} symptoms — your tech will assess all of them on-site.`:'';
+        el.text.textContent=match.text+extra;
+        el.price.textContent=match.price;el.cta.style.display='inline-block';
+      }
+      boxes.forEach(b=>b.addEventListener('change',update));
+    })();
+
+    /* ---------- BEFORE/AFTER slider ---------- */
+    (function(){
+      const ba=document.getElementById('ba'),before=document.getElementById('baBefore'),handle=document.getElementById('baHandle');
+      let dragging=false;
+      function setPos(clientX){
+        const r=ba.getBoundingClientRect();
+        let pct=((clientX-r.left)/r.width)*100;
+        pct=Math.max(0,Math.min(100,pct));
+        before.style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+        handle.style.left=pct+'%';
+      }
+      const start=()=>dragging=true;
+      const end=()=>dragging=false;
+      const move=e=>{if(!dragging)return;const x=e.touches?e.touches[0].clientX:e.clientX;setPos(x);};
+      ba.addEventListener('mousedown',e=>{start();setPos(e.clientX);});
+      ba.addEventListener('touchstart',e=>{start();setPos(e.touches[0].clientX);},{passive:true});
+      window.addEventListener('mousemove',move);
+      window.addEventListener('touchmove',move,{passive:true});
+      window.addEventListener('mouseup',end);
+      window.addEventListener('touchend',end);
+    })();
+
+    /* ---------- TESTIMONIAL carousel ---------- */
+    (function(){
+      const slides=document.getElementById('slides');
+      const total=slides.children.length;
+      const dots=document.getElementById('dots');
+      let i=0,timer;
+      for(let d=0;d<total;d++){const dot=document.createElement('i');dot.addEventListener('click',()=>go(d));dots.appendChild(dot);}
+      function render(){slides.style.transform=`translateX(-${i*100}%)`;[...dots.children].forEach((d,n)=>d.classList.toggle('on',n===i));}
+      function go(n){i=(n+total)%total;render();reset();}
+      function reset(){clearInterval(timer);timer=setInterval(()=>go(i+1),5500);}
+      document.getElementById('next').addEventListener('click',()=>go(i+1));
+      document.getElementById('prev').addEventListener('click',()=>go(i-1));
+      render();reset();
+    })();
+
+    /* ---------- QUOTE form ---------- */
+    (function(){
+      const checks=[...document.querySelectorAll('#checklist input')];
+      checks.forEach(c=>c.addEventListener('change',()=>c.closest('.chk').classList.toggle('on',c.checked)));
+      const urg=document.getElementById('urgToggle'),urgLabel=document.getElementById('urgLabel');
+      urg.addEventListener('change',()=>urgLabel.textContent=urg.checked?'Emergency — fastest available crew':'Standard scheduling');
+      document.getElementById('quoteForm').addEventListener('submit',function(e){
+        e.preventDefault();
+        const n=document.getElementById('qname').value.trim(),p=document.getElementById('qphone').value.trim();
+        if(!n||!p){alert('Please add your name and phone so we can reach you.');return;}
+        document.getElementById('qOk').style.display='block';
+        this.reset();checks.forEach(c=>c.closest('.chk').classList.remove('on'));urgLabel.textContent='Standard scheduling';
+      });
+    })();
+
+    /* ---------- Reveal on scroll ---------- */
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>

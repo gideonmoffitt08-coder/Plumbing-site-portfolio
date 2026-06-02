@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FlowRight Plumbing Co. — Demo Tiers</title>
+<meta name="description" content="Three website demo tiers for FlowRight Plumbing Co. — Starter, Standard, and Premium." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --slate:#1C2B3A;
+    --copper:#B87333;
+    --white:#F8F9FA;
+    --blue:#2196F3;
+    --yellow:#FFC107;
+    --slate-2:#243a4f;
+    --ink:#0f1b26;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:radial-gradient(1200px 800px at 80% -10%, #25435c 0%, var(--ink) 55%);
+    color:var(--white);
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand{font-family:'Barlow Condensed',sans-serif;letter-spacing:.5px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  header.top{padding:56px 0 8px;text-align:center}
+  .brand-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px}
+  .logo{
+    width:46px;height:46px;border-radius:12px;
+    background:linear-gradient(135deg,var(--copper),#d68b48);
+    display:grid;place-items:center;box-shadow:0 8px 24px rgba(184,115,51,.35)
+  }
+  .logo svg{width:26px;height:26px}
+  .brand{font-size:28px;font-weight:700;text-transform:uppercase;color:#fff}
+  .eyebrow{
+    display:inline-block;color:var(--copper);font-weight:700;letter-spacing:3px;
+    text-transform:uppercase;font-size:13px;margin-bottom:14px
+  }
+  header.top h1{font-size:clamp(38px,6vw,64px);line-height:1.02;font-weight:700;text-transform:uppercase}
+  header.top h1 span{color:var(--blue)}
+  header.top p.sub{max-width:620px;margin:18px auto 0;color:#aebccb;font-size:18px;line-height:1.6}
+  .grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+    padding:56px 0 80px
+  }
+  .card{
+    position:relative;background:linear-gradient(180deg,rgba(36,58,79,.9),rgba(20,34,47,.95));
+    border:1px solid rgba(184,115,51,.25);border-radius:18px;padding:30px 26px 28px;
+    display:flex;flex-direction:column;text-decoration:none;color:inherit;
+    transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    overflow:hidden
+  }
+  .card::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(400px 200px at 50% -20%, rgba(33,150,243,.18), transparent 70%);
+    opacity:0;transition:opacity .35s ease
+  }
+  .card:hover{transform:translateY(-8px);border-color:var(--blue);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+  .card:hover::before{opacity:1}
+  .tier-name{font-size:30px;font-weight:700;text-transform:uppercase;margin-bottom:4px}
+  .tier-tag{color:#9fb0c0;font-size:14px;margin-bottom:18px}
+  .price{font-family:'Barlow Condensed';font-size:46px;font-weight:700;color:var(--copper);line-height:1}
+  .price small{font-size:15px;color:#8fa0b0;font-weight:600}
+  ul.feat{list-style:none;margin:22px 0 26px;flex:1}
+  ul.feat li{
+    position:relative;padding:8px 0 8px 28px;color:#cdd8e2;font-size:14.5px;
+    border-bottom:1px solid rgba(255,255,255,.06)
+  }
+  ul.feat li::before{
+    content:"";position:absolute;left:2px;top:13px;width:12px;height:12px;border-radius:50%;
+    background:var(--blue);box-shadow:0 0 0 4px rgba(33,150,243,.15)
+  }
+  .cta{
+    margin-top:auto;text-align:center;padding:13px 18px;border-radius:11px;font-weight:700;
+    text-transform:uppercase;letter-spacing:1px;font-size:14px;
+    background:var(--blue);color:#fff;transition:background .25s ease
+  }
+  .card:hover .cta{background:var(--copper)}
+  .badge-top{
+    position:absolute;top:16px;right:16px;background:var(--yellow);color:var(--slate);
+    font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;
+    padding:5px 10px;border-radius:999px
+  }
+  .premium{border-color:var(--copper)}
+  footer{padding:30px 0 50px;text-align:center;color:#7e8e9e;font-size:13.5px;border-top:1px solid rgba(255,255,255,.07)}
+  @media(max-width:880px){.grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand-row">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 5 9.5 5 15a7 7 0 0 0 14 0c0-5.5-7-13-7-13Z" fill="#fff"/></svg>
+        </div>
+        <span class="brand">FlowRight Plumbing Co.</span>
+      </div>
+      <span class="eyebrow">Website Demo Portfolio</span>
+      <h1>Pick Your <span>Tier</span></h1>
+      <p class="sub">Three production-ready website demos for a licensed master plumber — each tier adds more interactivity, tooling, and polish. Click any card to explore the live demo.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <a class="card" href="./starter/index.html">
+        <span class="badge-top">Entry</span>
+        <div class="tier-name">Starter</div>
+        <div class="tier-tag">Clean, fast, single-page</div>
+        <div class="price">$749</div>
+        <ul class="feat">
+          <li>Animated dripping-pipe hero</li>
+          <li>3 core service cards</li>
+          <li>Pulsing same-day emergency badge</li>
+          <li>Basic contact details</li>
+          <li>Fade-in on scroll</li>
+        </ul>
+        <span class="cta">View Starter Demo</span>
+      </a>
+
+      <a class="card" href="./standard/index.html">
+        <span class="badge-top">Popular</span>
+        <div class="tier-name">Standard</div>
+        <div class="tier-tag">Lead-generating business site</div>
+        <div class="price">$1,249</div>
+        <ul class="feat">
+          <li>Pipe water-fill hero animation</li>
+          <li>5 service cards + ripple dividers</li>
+          <li>Contact form with urgency levels</li>
+          <li>Map embed + testimonials</li>
+          <li>Mobile hamburger nav</li>
+        </ul>
+        <span class="cta">View Standard Demo</span>
+      </a>
+
+      <a class="card premium" href="./premium/index.html">
+        <span class="badge-top" style="background:var(--copper);color:#fff">Flagship</span>
+        <div class="tier-name">Premium</div>
+        <div class="tier-tag">Interactive flagship experience</div>
+        <div class="price">$2,499</div>
+        <ul class="feat">
+          <li>Cinematic flowing-water hero</li>
+          <li>7 flip cards + diagnostic tool</li>
+          <li>Before/after damage slider</li>
+          <li>Animated coverage map + carousel</li>
+          <li>SEO schema + sticky nav</li>
+        </ul>
+        <span class="cta">View Premium Demo</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">FlowRight Plumbing Co. — demo concepts for portfolio use. Licensed • Insured • Same-Day Service.</div>
+  </footer>
+</body>
+</html>
